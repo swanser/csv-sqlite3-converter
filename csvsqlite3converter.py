@@ -64,7 +64,7 @@ class dataBaser(tkinter.Frame):
 
             #Set database filename for output, add .sq3 file extension if user did not
             self.fileName = filedialog.asksaveasfilename(filetypes = (('SQL3LITE Database files', '*.sq3'),('All Files', '*.*') ) )
-            if self.fileName[:-4].lower() != ".sq3": self.fileName = self.fileName + ".sq3"
+            if self.fileName[-4:].lower() != ".sq3": self.fileName = self.fileName + ".sq3"
 
             #Read CSV and store in list
             data_rows = []
