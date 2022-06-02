@@ -69,7 +69,7 @@ class dataBaser(tkinter.Frame):
             #Read CSV and store in list
             data_rows = []
             print("Reading CSV")
-            with open(self.csvFileName, newline='', encoding='utf-8') as csvFile:
+            with open(self.csvFileName, newline='', encoding='utf-8-sig') as csvFile:
                 reader = csv.reader(csvFile, delimiter=',')
                 for each_line in reader:
                     data_rows.append(each_line)
